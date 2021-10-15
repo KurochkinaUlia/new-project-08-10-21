@@ -2,17 +2,11 @@
 
 
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-if (numberOfFilms <=10) {
-    alert('Просмотрено довольно мало фильмов');
-} else if (numberOfFilms >10 && numberOfFilms <30) {     
-    alert('Вы классический зритель');
+let numberOfFilms;
+
+function start () {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 }
- else if (numberOfFilms >=30) {     
-    alert('Вы киноман');
-} else {
-    alert('Произошла ошибка');
-} 
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -35,10 +29,18 @@ for (let i=0; i<2; i++) {
     }  
 }
 
+if (personalMovieDB.count <=10) {
+    alert('Просмотрено довольно мало фильмов');
+} else if (personalMovieDB.count >10 && personalMovieDB.count <30) {     
+    alert('Вы классический зритель');
+}
+ else if (personalMovieDB.count >=30) {     
+    alert('Вы киноман');
+} else {
+    alert('Произошла ошибка');
+} 
+
 console.log (personalMovieDB);
-
-
-
 
 
 
